@@ -9,6 +9,7 @@ const sequelize = new Sequelize(
     dialect: 'postgres',
     }
 );
+    sequelize.sync();
 (async()=>{
     try {
         await sequelize.authenticate();

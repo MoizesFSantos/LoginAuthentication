@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const signUp = require('./signup.router');
+const signIn = require('./signin');
 
-router.get('/', (req, res) => {
-  res.json({
-    message: 'working'
-  });
-});
+
+router.use(signUp);
+router.use(signIn);
+
 
 
 module.exports = router;
